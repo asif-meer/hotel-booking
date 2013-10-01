@@ -32,6 +32,8 @@ Hsahara::Application.routes.draw do
 
   resources :services
 
+  resources :users
+
   resources :companies
 
   get "home/index", :as => "user_root"
