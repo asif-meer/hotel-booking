@@ -1,0 +1,11 @@
+.float-left
+  = render 'home/admin_links'
+.float-right
+  .container_16
+    %h3 Edit Room
+    .block-border
+      .block-content
+        = render 'form'
+
+        /link_to 'Show', @room
+        = link_to 'Back', rooms_path
