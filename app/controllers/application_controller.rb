@@ -60,5 +60,3 @@ class ApplicationController < ActionController::Base
   end
 
 end
-
-# A comment from Daniyal

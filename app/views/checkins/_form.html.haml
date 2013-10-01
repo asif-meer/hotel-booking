@@ -12,15 +12,14 @@
       .block-content
         %h1 Guest Details
         %fieldset
-          %p.left{:style => "width:45%"}
+          %span
             = f.label :first_name
-            =text_field_tag "FirstName",''
-          %p.right{:style => "width:45%"}
+            =text_field_tag "FirstName",'', :class => "name_field"
+          %span.last_name_margin
             =f.label :last_name
-            =text_field_tag "LastName",''
-
-          %p
-            %button{:onclick => "addguest();",:type=>"button"}="Add Guest"
+            =text_field_tag "LastName",'', :class => "name_field"
+          %span
+            %button{:onclick => "addguest();",:type=>"button", :class => "add_guest_button"}="Add Guest"
         %h4 Guests
         %ul#guestholder.holder
   .clear
@@ -30,9 +29,17 @@
       .block-content
         %h1 Checkin Details
         %h4 Company Name
-        = select_tag :company,options_for_select(Company.all.collect{|c| [c.name,c.id]}.push(['Add new','add_new'])),{:name => "checkin[company_id]"}
+        %br
+        = select_tag :company,options_for_select(Company.all.collect{|c| [c.name,c.id]}.push(['Add new','add_new'])),{:name => "checkin[company_id]",:class => "company_name_width"}
+        %br
+        %br
         %h4 Rooms
-        = link_to_function image_tag('add.jpg') ,"addroomrow();return false;",:style => "text-decoration:none;float:left;margin:25px 5px;"
+        %br
+        = link_to_function image_tag('add.jpg') ,"addroomrow();return false;",:style => "text-decoration:none;float:left;margin:-5px 6px;"
+        %span.add_room_align
+          Add another room
+        %br
+        %br
         %table.total{:border => "1", :cellpadding => "2", :rules => "all"}
           %tbody
             %tr
@@ -95,7 +102,7 @@
         %p
         .field
           .actions
-            %button{:id => "checkin_submit",:name => "commit", :type => "submit", :value => "Create Checkin"}="Create Checkin"
+            %button{:id => "checkin_submit", :class => "check_in_btn", :name => "commit", :type => "submit", :value => "Create Checkin"}="Create Checkin"
 
 #error_dialog{:title => "Error",:style => "display:none;"}
 
