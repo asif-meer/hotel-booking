@@ -1,0 +1,19 @@
+.float-left
+  = render 'home/admin_links'
+.float-right
+  .container_16
+    %h3 Services
+    .block-border
+      .block-content
+
+        %table.roomlist{:cellspacing => 0}
+          - @services.each do |service|
+            %tr
+              %th{:scope => 'row'}= service.name
+              %td
+                /= service.name
+                /= link_to 'Show', room  
+                = link_to 'Edit', edit_service_path(service)
+                = link_to 'Destroy', service, :confirm => 'Are you sure?', :method => :delete
+      %br
+      =link_to 'New Service', new_service_path
