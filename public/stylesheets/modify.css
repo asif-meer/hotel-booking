@@ -1,0 +1,26 @@
+.add_guest_button {
+  margin-top: 25px;
+  margin-left: 20px;
+  width: 315px;
+}
+
+.name_field {
+  width: 150px;
+}
+
+.last_name_margin {
+  margin-left: 20px;
+}
+
+.add_room_align {
+  font-weight: bold;
+  margin-left: -3px;
+}
+
+.company_name_width {
+  width: 200px;
+}
+
+.check_in_btn {
+  margin-left: 721px;
+}
