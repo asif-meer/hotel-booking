@@ -1,6 +1,6 @@
 class HomeController < ApplicationController
-  before_filter :authenticate_user!, :only => ['index']
-  before_filter :authenticate_admin!,:only => ['admin']
+  # before_filter :authenticate_user!, :only => ['index']
+  # before_filter :authenticate_admin!,:only => ['admin']
 
   def index
     @rooms = Room.paginate :page => params[:page],:order => "id"
