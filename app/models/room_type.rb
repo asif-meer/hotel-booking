@@ -1,5 +1,5 @@
 class RoomType < ActiveRecord::Base
-  attr_accessible :name, :baserate
+  attr_accessible :name, :baserate, :facilities
   validates_presence_of :name # room name
-  validates_presence_of :baserate # room baserate 150
+  validates :baserate, numericality: true # room baserate 150
 end
