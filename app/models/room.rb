@@ -4,6 +4,7 @@ class Room < ActiveRecord::Base
   cattr_reader :per_page
   @@per_page = 12
   scope :available,{:conditions => "status is NULL"}
+  validates_presence_of :number # room number like room#123
 
   def roomtype
     return number + " - " + room_type.name + " # " + room_type.baserate.to_s
