@@ -22,6 +22,7 @@ group :test do
   gem "rspec-rails", "~> 2.0"
   gem "should_not"
   gem "shoulda-matchers"
+  gem "simplecov"
 end
 
 group :test, :development do
