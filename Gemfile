@@ -11,6 +11,11 @@ gem 'jquery-rails'
 gem 'will_paginate','3.0.pre2'
 gem 'devise'
 
+
+group :development, :test do
+  gem 'rspec-rails'
+end
+
 # Use unicorn as the web server
 # gem 'unicorn'
 
