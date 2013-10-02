@@ -13,6 +13,8 @@ gem 'devise'
 gem 'bundler', '~>1.3.5'
 gem 'devise-encryptable'
 gem 'prototype-rails'
+gem "number_to_words"
+
 
 
 group :test do
