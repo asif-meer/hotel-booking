@@ -23,8 +23,8 @@ test:
   reconnect: false
   database: hotelonrails_test
   pool: 5
-  username: dbuser
-  password: 
+  username: root
+  password: "123123"
   socket: /var/run/mysqld/mysqld.sock
 
 production:

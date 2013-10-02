@@ -1,19 +1,25 @@
 source 'http://rubygems.org'
 
-gem 'rails', '3.0.1'
+gem 'rails', '3.2.12'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'mysql2'
-gem 'haml'
+gem 'haml', '3.1.4'
 gem 'jquery-rails'
-gem 'will_paginate','3.0.pre2'
+gem 'will_paginate'
 gem 'devise'
+gem 'bundler', '~>1.3.5'
+gem 'devise-encryptable'
+gem 'prototype-rails'
 
 
-group :development, :test do
-  gem 'rspec-rails'
+group :test do
+  gem 'database_cleaner'
+  gem "rspec-rails", "~> 2.0"
+  gem "should_not"
+  gem "shoulda-matchers"
 end
 
 # Use unicorn as the web server
