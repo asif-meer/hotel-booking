@@ -2,11 +2,11 @@
   = render 'home/admin_links'
 .float-right
   .container_16
-    %h3 Edit Service
+    %h3 New Room Type
     .block-border
       .block-content
         = render 'form'
-        %br
 
-        /= link_to 'Show', @service
-        = link_to 'Back', services_path, :class=>"links_btn"
+        /= link_to 'Show', @room_type
+        %br
+        = link_to 'Back', room_types_path, :class=>"links_btn"

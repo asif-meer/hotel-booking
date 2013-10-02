@@ -24,3 +24,23 @@
 .check_in_btn {
   margin-left: 721px;
 }
+
+.links_btn {
+  background: -moz-linear-gradient(center top , white, #72C6E4 4%, #0C5FA5) repeat scroll 0 0 transparent;
+  background: -webkit-gradient(linear,left top, left bottom,from(white),to(#0c5fa5),color-stop(0.03, #72c6e4));
+  padding: 2px 6px 1px;
+  font-size: 1.5em;
+  color: white;
+  border-color: #50A3C8 #297CB4 #083F6F;
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 0.278em;
+}
+
+.del_btn_margin {
+  margin-left: 6px;
+}
+
+.text_field_width_200 {
+  width: 200px;
+}

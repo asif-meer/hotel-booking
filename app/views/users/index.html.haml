@@ -5,7 +5,9 @@
     %h3 Users
     .block-border
       .block-content
-
+        =link_to 'New User', new_user_path, :class => "links_btn"
+        %br
+        %br
         %table.roomlist{:cellspacing => 0}
           - @users.each do |user|
             %tr
@@ -13,7 +15,6 @@
               %td
                 /= service.name
                 /= link_to 'Show', user
-                = link_to 'Edit', edit_user_path(user)
-                = link_to 'Destroy', user, :confirm => 'Are you sure?', :method => :delete
+                = link_to 'Destroy', user, :confirm => 'Are you sure?', :method => :delete, :class => "links_btn right del_btn_margin"
+                = link_to 'Edit', edit_user_path(user), :class => "links_btn right"
       %br
-      =link_to 'New User', new_user_path

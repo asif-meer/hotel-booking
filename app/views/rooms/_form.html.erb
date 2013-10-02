@@ -15,11 +15,13 @@
     <%= f.label :number %><br />
     <%= f.text_field :number %>
   </div>
+  </br>
   <div class="field">
     <%= f.label :room_type_id %><br />
     <%= f.select :room_type_id, RoomType.all.collect{|r| [r.name,r.id]} %>
   </div>
+  </br>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit'Update', :class => 'links_btn' %>
   </div>
 <% end %>

@@ -6,6 +6,7 @@
     .block-border
       .block-content
         = render 'form'
+        %br
 
         /link_to 'Show', @room
-        = link_to 'Back', rooms_path
+        = link_to 'Back', rooms_path, :class=>"links_btn"

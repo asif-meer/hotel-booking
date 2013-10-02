@@ -13,9 +13,10 @@
 
   <div class="field">
     <%= f.label :name %><br />
-    <%= f.text_field :name %>
+    <%= f.text_field :name, :class => "text_field_width_200" %>
   </div>
+  </br>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit 'Update', :class => "links_btn" %>
   </div>
 <% end %>

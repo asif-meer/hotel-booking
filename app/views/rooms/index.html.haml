@@ -5,15 +5,16 @@
     %h3 Listing rooms
     .block-border
       .block-content
-
+        = link_to 'Add New Room', new_room_path, :class => "links_btn"
+        %br
+        %br
         %table.roomlist{:cellspacing => 0}
           - @rooms.each do |room|
             %tr
               %th{:scope => 'row'}= room.number
               %td
                 = room.room_type.name
-                = link_to 'Show', room
-                = link_to 'Edit', edit_room_path(room)
-                = link_to 'Destroy', room, :confirm => 'Are you sure?', :method => :delete
+                /= link_to 'Show', room
+                = link_to 'Delete', room, :confirm => 'Are you sure?', :method => :delete, :class=>"links_btn right del_btn_margin"
+                = link_to 'Edit', edit_room_path(room), :class=>"links_btn right"
       %br
-      = link_to 'New Room', new_room_path
