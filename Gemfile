@@ -27,6 +27,7 @@ end
 
 group :test, :development do
   gem 'factory_girl_rails'
+  gem "cucumber-rails", :require => false
 end
 
 # Use unicorn as the web server
