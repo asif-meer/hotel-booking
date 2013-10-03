@@ -28,6 +28,8 @@ end
 group :test, :development do
   gem 'factory_girl_rails'
   gem "cucumber-rails", :require => false
+  gem 'selenium-webdriver'
+  gem 'capybara-screenshot'
 end
 
 # Use unicorn as the web server
