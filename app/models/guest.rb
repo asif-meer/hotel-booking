@@ -1,11 +1,11 @@
-class Guest < ActiveRecord::Base
-  has_and_belongs_to_many :checkins
-  validates_presence_of :FirstName
-  validates_presence_of :LastName
-  validates :Nic, presence: true, uniqueness: true
+class Guest < ActiveRecord::Base                                     
+  has_and_belongs_to_many :checkins                                 
+  validates_presence_of :firstname                                     
+  validates_presence_of :lastname                                     
+  #validates :nic, presence: true, uniqueness: true                                     
 
 
-  def name
-    self.FirstName  + " " + self.LastName
-  end
-end
+  def name                                     
+    self.firstname  + " " + self.lastname                                     
+  end                                     
+end                                     

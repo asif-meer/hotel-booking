@@ -169,7 +169,7 @@
           %tr
             %td{:colspan => 2}
               %b Total Amount in Words:
-              ="Rs. " +  (@checkin.pending_balance).to_i.to_english.capitalize + " only."
+              ="Rs. " +  (@checkin.pending_balance).to_i.to_words.capitalize + " only."
         - elsif @checkin.description == "Discount : "
           %tr
             %td.right
@@ -187,7 +187,7 @@
           %tr
             %td{:colspan => 2}
               %b Total Amount in Words:
-              ="Rs. " +  (@checkin.pending_balance).to_i.to_english.capitalize + " only."
+              ="Rs. " +  (@checkin.pending_balance).to_i.to_words.capitalize + " only."
 
 
 

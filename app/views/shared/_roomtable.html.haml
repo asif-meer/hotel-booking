@@ -10,7 +10,7 @@
         -if checkin
           .gb
             %div{:class => "#{checkin.nil? ? 'guestbox' : 'guestbox checkedin'}"}
-              .name="#{checkin.guests[0].FirstName} #{checkin.guests[0].LastName}"
+              .name="#{checkin.guests[0].firstname if checkin.guests[0]} #{checkin.guests[0].lastname if checkin.guests[0]}"
           %ul.roomfunctions
             %li
               =link_to "Shift Room","#",:class => "shiftroom_link"

@@ -88,8 +88,8 @@ class CheckinsController < ApplicationController
             arr = value.split(/#/)
             guest = Guest.new
             if arr[0] != "" || arr[1] != ""
-              guest.FirstName = arr[0]
-              guest.LastName = arr[1]
+              guest.firstname = arr[0]
+              guest.lastname = arr[1]
               guest.save!
               @checkin.guests << guest
             end
