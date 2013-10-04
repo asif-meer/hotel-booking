@@ -87,9 +87,10 @@ class CheckinsController < ApplicationController
           params[:guest].each do |key,value|
             arr = value.split(/#/)
             guest = Guest.new
-            if arr[0] != "" || arr[1] != ""
+            if arr[0] != "" || arr[1] != "" || arr[2] != ""
               guest.firstname = arr[0]
               guest.lastname = arr[1]
+              guest.nic = arr[2]
               guest.save!
               @checkin.guests << guest
             end

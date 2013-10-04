@@ -18,6 +18,9 @@
           %span.last_name_margin
             =f.label :last_name
             =text_field_tag "lastname",'', :class => "name_field"
+          %span.last_name_margin
+            =f.label :nic
+            =text_field_tag "nic",'', :class => "name_field"
           %span
             %button{:onclick => "addguest();",:type=>"button", :class => "add_guest_button"}="Add Guest"
         %h4 Guests
@@ -182,13 +185,14 @@
   }
   function addguest(){
     myl  = $('#guestholder li').length;
-    if(($('#firstame').val() == '')||($('#lastname').val() == '')){
+    if(($('#firstame').val() == '')||($('#lastname').val() == '' ||($('#nic').val() == ''))){
       myalert('First Name and Last Name is required');
     }
     else{
       $('#firstname').removeClass('required');
       $('#lastname').removeClass('required');
-      html = "<li class='bit-box'>" + $('#firstname').val() + " " + $('#lastname').val()  + "<input type='hidden' value='" + $('#firstname').val() + "#" + $('#lastname').val() + "' name='guest[" + myl + "]'/>" + "<a href='#' class='closebutton'></a> " + "</li>"
+      $('#nic').removeClass('required');
+      html = "<li class='bit-box'>" + $('#firstname').val() + " " + $('#lastname').val()  + " " + $('#nic').val()  + "<input type='hidden' value='" + $('#firstname').val() + "#" + $('#lastname').val() + "#" + $('#nic').val()+ "' name='guest[" + myl + "]'/>" + "<a href='#' class='closebutton'></a> " + "</li>"
       $('#guestholder').append(html);
     }
     return false;
